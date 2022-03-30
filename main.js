@@ -2,10 +2,13 @@ leftWristX = 0;
 leftWristY = 0;
 rightWristX = 0;
 rightWristY = 0;
+song1 = "";
+song2 = "";
 
 function preload()
 {
-    
+    song1 = loadSound("music.mp3");
+    song2 = loadSound("music2.mp3");
 }
 
 function setup()
@@ -14,7 +17,7 @@ function setup()
     canvas.center();
 
     video = createCapture(VIDEO);
-    video.hide(
+    video.hide()
 
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses);
